@@ -1,0 +1,21 @@
+{
+  "initdelay": 2,
+  "workstart": "./uwsgistart.sh",
+  "workwatch": 15,
+  "workintvl": 5,
+  "firewall": {
+    "tcpportpmt": "8003:8006",
+    "udpportpmt": "",
+    "icmppermit": "yes"
+  },
+  "uwsgi": {
+    "srvport":   "",
+    "protocol":  "",
+    "gwtype":    "",
+    "gwfile":    "",
+    
+    "OPTprotocol": [ "http", "https", "fastcgi", "scgi", "uwsgi", "suwsgi" ],
+    "OPTapptype":  [ "python3", "lua", "luajit", "cgi" ]
+  }
+}
+
