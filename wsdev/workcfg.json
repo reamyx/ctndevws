@@ -1,0 +1,40 @@
+{
+  "initdelay": 2,
+  "workstart": "",
+  "workwatch": 15,
+  "workintvl": 3,
+  "firewall": {
+    "tcpportpmt": "80:99",
+    "udpportpmt": "80:99",
+    "icmppermit": "yes",
+    "igmppermit": "no",
+    "grepermit":  "no",
+    "esppermit":  "no",
+    "ahpermit":   "no"
+  },
+  "sshsrv": {
+    "enable":  "yes",
+    "sshport": 24,
+    "rootpwd": "abc000"
+  },
+  "inetdail": {
+    "enable":   "no",
+    "dialuser": "",
+    "dialpswd": "",
+    "dialintf": "",
+    "usedefgw": "yes"
+  },
+  "ovpnser": {
+    "enable":  "no",
+    "srvport": "",
+    "defuser": "",
+    "defpswd": ""
+  },
+  "ovpnclt": {
+    "enable":   "no",
+    "rmtport":  "",
+    "rmtaddr":  "",
+    "username": "",
+    "password": ""
+  }
+}

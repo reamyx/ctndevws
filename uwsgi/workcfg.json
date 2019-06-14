@@ -15,7 +15,6 @@
     "gwfile":    "",
     
     "OPTprotocol": [ "http", "https", "fastcgi", "scgi", "uwsgi", "suwsgi" ],
-    "OPTapptype":  [ "python3", "lua", "luajit", "cgi" ]
+    "OPTapptype":  [ "python3", "lua", "cgi" ]
   }
 }
-

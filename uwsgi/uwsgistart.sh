@@ -23,15 +23,12 @@ SRVPROT="$( echo "http https fastcgi scgi uwsgi suwsgi" | grep -Ewo "$SRVPROT" )
 SRVPROT="${SRVPROT:-uwsgi}"
 
 #网关类型配置
-GWTYPE="$( echo "python3 lua luajit cgi" | grep -Ewo "$GWTYPE" )"
+GWTYPE="$( echo "python3 lua cgi" | grep -Ewo "$GWTYPE" )"
 
 [[ "$GWTYPE" == "python3" || -z "$GWTYPE" ]] && {
     SRVPORT="${SRVPORT:-8003}"; GFPM=( "--wsgi-file" "${GWFILE:-wsgi.py}" ); }
     
 [ "$GWTYPE" == "lua"     ] && {
-    SRVPORT="${SRVPORT:-8005}"; GFPM=( "--lua" "${GWFILE:-wsapi.lua}" ); }
-    
-[ "$GWTYPE" == "luajit"  ] && {
     SRVPORT="${SRVPORT:-8005}"; GFPM=( "--lua" "${GWFILE:-wsapi.lua}" ); }
     
 [ "$GWTYPE" == "cgi"     ] && {
