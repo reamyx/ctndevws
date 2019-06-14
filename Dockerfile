@@ -24,13 +24,13 @@ RUN     set -x \
         && curl -O https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.22.0.tar.gz \
         && tar -zxvf git-2.22.0.tar.gz \
         && cd git-2.22.0 \
-        && ./configure prefix=/usr/local
+        && ./configure prefix=/usr/local \
         && make \
         && make install \
         && cd - \
         \
         && yum -y install nginx httpd-tools fcgi fcgi-devel spawn-fcgi \
-        && git clone https://github.com/gnosek/fcgiwrap 
+        && git clone https://github.com/gnosek/fcgiwrap \
         && cd fcgiwrap \
         && autoreconf -i \
         && ./configure \
@@ -72,14 +72,14 @@ RUN     set -x \
         \
         && curl -L -O https://studygolang.com/dl/golang/go1.12.5.linux-amd64.tar.gz \
         && tar -zxvf go1.12.5.linux-amd64.tar.gz \
-        && mkdir -p /usr/local/go
+        && mkdir -p /usr/local/go \
         && \cp -rf go/{bin,pkg,src} /usr/local/go \
         && mkdir -p /srv/Gowkdir/src/golang.org/x \
         && git clone https://github.com/golang/tools \
         && rm -rf tools/.git \
         && mv -f tools /srv/Gowkdir/src/golang.org/x \
-        && echo "export GOPATH=\"/srv/Gowkdir\"" > /etc/profile.d/GoPathSet.sh
-        && echo "export PATH=\"\$PATH:/usr/local/go/bin\"" > /etc/profile.d/GoBinSet.sh
+        && echo "export GOPATH=\"/srv/Gowkdir\"" > /etc/profile.d/GoPathSet.sh \
+        && echo "export PATH=\"\$PATH:/usr/local/go/bin\"" > /etc/profile.d/GoBinSet.sh \
         \
         && git clone https://github.com/unbit/uwsgi \
         && cd uwsgi \
