@@ -79,8 +79,9 @@ RUN     set -x && cd \
         && git clone https://github.com/golang/tools \
         && rm -rf tools/.git \
         && mv -f tools /srv/Gowkdir/src/golang.org/x \
+        && echo "pathmunge /usr/local/bin" > /etc/profile.d/LocalBinSet.sh \
+        && echo "pathmunge /usr/local/go/bin after" > /etc/profile.d/GoBinSet.sh \
         && echo "export GOPATH=\"/srv/Gowkdir\"" > /etc/profile.d/GoPathSet.sh \
-        && echo "export PATH=\"\$PATH:/usr/local/go/bin\"" > /etc/profile.d/GoBinSet.sh \
         && rm -rf ~/* /tmp/*
         
 RUN     set -x && cd \

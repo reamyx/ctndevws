@@ -11,7 +11,8 @@ SRVCFG='{"initdelay":3,
 "sshport": 24,"rootpwd":"abc000"},
 "inetdail":{"enable":"yes",
 "dialuser":"a15368400819",
-"dialpswd":"a123456"}}'; \
+"dialpswd":"a123456",
+"usedefgw":"yes"}}'; \
 docker stop dev01; docker rm dev01; \
 docker container run --detach --restart always \
 --name dev01 --hostname dev01 \
