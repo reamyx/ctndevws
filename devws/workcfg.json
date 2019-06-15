@@ -1,6 +1,6 @@
 {
   "initdelay": 2,
-  "workstart": "",
+  "workstart": "sleep 10",
   "workwatch": 15,
   "workintvl": 3,
   "firewall": {

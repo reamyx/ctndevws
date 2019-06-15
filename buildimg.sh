@@ -1,7 +1,7 @@
 #!/bin/env sh
 PATH="/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"; cd "$(dirname "$0")"
 
-IMGNM="ctnwebgw" BASE="imginit"
+IMGNM="ctndevws" BASE="imginit"
 
 #从参数或环境变量确定仓库路径
 PUSH="$1" PUSH="${PUSH:-$PSPATH}"
